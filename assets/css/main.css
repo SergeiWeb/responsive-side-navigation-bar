@@ -1,0 +1,337 @@
+:root {
+  --sidebar-dw: 240px;
+  --sidebar-sw: 78px;
+  --sidebar-dc: #11101d;
+  --sidebar-hc: #1d1b31;
+  --body-font: 'Poppins', sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.sidebar {
+  top: 0;
+  left: 0;
+  width: var(--sidebar-sw);
+  height: 100%;
+  position: fixed;
+  padding: 6px 14px;
+  background-color: var(--sidebar-dc);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: var(--sidebar-dw);
+}
+
+.sidebar.active .logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar.active .logo__content #btn {
+  left: 90%;
+}
+
+.sidebar.active .nav__list li a .links__name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar.active .nav__list li .tooltip {
+  display: none;
+}
+
+.sidebar.active .profile {
+  background-color: var(--sidebar-hc);
+}
+
+.sidebar.active .profile__details {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar.active .profile #log-out {
+  left: 88%;
+  background: none;
+}
+
+.sidebar.active ~ .home__content {
+  left: var(--sidebar-dw);
+  width: calc(100% - var(--sidebar-dw));
+}
+
+.sidebar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .logo__content {
+  position: relative;
+}
+
+.sidebar .logo__content #btn {
+  top: 6px;
+  left: 50%;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sidebar .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.sidebar .logo__name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar .nav__list {
+  margin-top: 20px;
+}
+
+.sidebar .nav__list li {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  margin: 0 5px;
+  line-height: 50px;
+}
+
+.sidebar .nav__list li:hover .tooltip {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .nav__list li a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+.sidebar .nav__list li a:hover {
+  color: var(--sidebar-dc);
+  background-color: #fff;
+}
+
+.sidebar .nav__list li a i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .nav__list li a i.search-icon {
+  color: #fff;
+  z-index: 99;
+  font-size: 22px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidebar .nav__list li a i.search-icon:hover {
+  background-color: #fff;
+  color: var(--sidebar-hc);
+}
+
+.sidebar .nav__list li a .links__name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav__list li a input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background-color: var(--sidebar-hc);
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar .nav__list li .tooltip {
+  top: 0;
+  opacity: 0;
+  left: 122px;
+  width: 122px;
+  height: 35px;
+  -webkit-transition: 0;
+  -o-transition: 0;
+  transition: 0;
+  display: block;
+  line-height: 35px;
+  position: absolute;
+  text-align: center;
+  border-radius: 6px;
+  pointer-events: none;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .profile {
+  height: 60px;
+  padding: 10px 6px;
+  position: relative;
+  background: none;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.sidebar .profile__content {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  position: absolute;
+}
+
+.sidebar .profile__details {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sidebar .profile__details img {
+  height: 45px;
+  width: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+
+.sidebar .profile__details .name__job {
+  margin-left: 10px;
+}
+
+.sidebar .profile__details .name__job .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebar .profile__details .name__job .job {
+  font-size: 12px;
+}
+
+.sidebar .profile #log-out {
+  left: 50%;
+  bottom: 5px;
+  height: 50px;
+  cursor: pointer;
+  min-width: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  border-radius: 12px;
+  text-align: center;
+  position: absolute;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: var(--sidebar-hc);
+}
+
+.home__content {
+  height: 100%;
+  position: absolute;
+  left: var(--sidebar-sw);
+  width: calc(100% - var(--sidebar-sw));
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.home__content .text {
+  margin: 12px;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--sidebar-hc);
+}

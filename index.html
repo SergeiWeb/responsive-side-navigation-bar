@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- normalize -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- boxicons -->
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- styles -->
+		<link rel="stylesheet" href="./assets/css/main.css" />
+
+		<!-- scripts -->
+		<script defer src="./assets/js/main.js"></script>
+
+		<title>Responsive Side Navigation Bar</title>
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="logo__content">
+				<div class="logo">
+					<i class="bx bxl-c-plus-plus"></i>
+					<div class="logo__name">Mirror</div>
+				</div>
+				<i class="bx bx-menu" id="btn"></i>
+			</div>
+
+			<ul class="nav__list">
+				<li>
+					<a href="#">
+						<i class="bx bx-search search-icon" id="search-icon"></i>
+						<input type="text" placeholder="Search..." />
+					</a>
+					<span class="span tooltip">Search</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-grid-alt"></i>
+						<span class="links__name">Dashboard</span>
+					</a>
+					<span class="span tooltip">Dashboard</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-user"></i>
+						<span class="links__name">User</span>
+					</a>
+					<span class="span tooltip">User</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-chart"></i>
+						<span class="links__name">Messages</span>
+					</a>
+					<span class="span tooltip">Messages</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-pie-chart-alt-2"></i>
+						<span class="links__name">Analytics</span>
+					</a>
+					<span class="span tooltip">Analytics</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-folder"></i>
+						<span class="links__name">File Manager</span>
+					</a>
+					<span class="span tooltip">File Manager</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-cart-alt"></i>
+						<span class="links__name">Order</span>
+					</a>
+					<span class="span tooltip">Order</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-heart"></i>
+						<span class="links__name">Saved</span>
+					</a>
+					<span class="span tooltip">Saved</span>
+				</li>
+				<li>
+					<a href="#">
+						<i class="bx bx-cog"></i>
+						<span class="links__name">Settings</span>
+					</a>
+					<span class="span tooltip">Settings</span>
+				</li>
+			</ul>
+
+			<div class="profile__content">
+				<div class="profile">
+					<div class="profile__details">
+						<img src="./assets/img/profile.jpg" alt="img: proile" />
+						<div class="name__job">
+							<div class="hame">Blade Milliar</div>
+							<div class="job">Web Designer</div>
+						</div>
+					</div>
+					<i class="bx bx-log-out" id="log-out"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="home__content">
+			<div class="text">Home Content</div>
+		</div>
+	</body>
+</html>
